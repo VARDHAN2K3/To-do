@@ -75,7 +75,7 @@ function renderList(){
     let renderHtml = '';
     const today = dayjs();
     todos.forEach((todo,i) => {
-        const target = today.add(todo.days,'day')
+        const target = today.add(todo.days-1,'day')
         const targetDate = target.format('dddd, D MMM YYYY');
         renderHtml += `
         <div class="todo-list-div">
